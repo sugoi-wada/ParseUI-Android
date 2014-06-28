@@ -174,8 +174,10 @@ public class ParseLoginActivity extends FragmentActivity implements
   @Override
   public void onLoadingStart(boolean showSpinner) {
     if (showSpinner) {
-      progressDialog = ProgressDialog.show(this, null,
-          getString(R.string.com_parse_ui_progress_dialog_text), true, false);
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage(getString(R.string.com_parse_ui_progress_dialog_text));
+        progressDialog.setIndeterminate(true);
+        progressDialog.setCancelable(false);
     }
   }
 
