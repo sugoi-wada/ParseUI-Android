@@ -4,8 +4,8 @@ rootProject.name = 'ParseAndroidUI'
 include ':ParseLoginUI'
 
 // Facebook SDK
-include 'facebook-sdk:facebook'
-
+include 'facebook-sdk'
+project(':facebook-sdk').projectDir = new File('facebook-sdk/facebook')
 // Sample Projects
 include ':ParseLoginSampleBasic'
 include ':ParseLoginSampleWithDispatchActivity'
